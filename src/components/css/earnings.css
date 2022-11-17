@@ -1,0 +1,124 @@
+.earnings {
+  height: 84vh;
+  display: flex;
+  margin: 0 5vw;
+  flex-direction: column;
+}
+.banner {
+  margin-left: 8vw;
+  width: 80%;
+  height: 30%;
+  padding: 2vh 0;
+  display: flex;
+  justify-content: space-between;
+}
+.earnings-card {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  box-shadow: 0px 3px 100px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.earning-info {
+  margin-top: 0.5em;
+  width: 100%;
+  display: flex;
+}
+.earning-info:nth-child(2) > h3 {
+  margin-left: -3em;
+}
+.earning-info h6 {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #800080;
+}
+.earning-info h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.earning-info.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.withdraw {
+}
+.withdraw-button {
+  background-color: #800080;
+  color: #fff;
+  padding: 8px 16px;
+  height: 2em;
+  border: none;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+.withdraw-button:hover {
+  background-color: #800190;
+  cursor: pointer;
+}
+.referral-code {
+  width: 40%;
+}
+.referral-code h3 {
+  color: #800080;
+}
+.code {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #ff864c, #800080) border-box;
+  border-radius: 1em;
+  border: 2px solid transparent;
+  margin-top: 0.5em;
+  padding: 1em 6em;
+  letter-spacing: 2em;
+}
+.referrals-info {
+  margin-left: 8vw;
+  width: 80%;
+  margin-top: 1em;
+}
+.referralsInfo-title {
+  color: #800080;
+}
+.referral-info-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em 1em;
+  margin-top: 1em;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 100%;
+  background-color: rgba(217, 217, 217, 0.25);
+  margin-right: 1em;
+}
+.info-detail {
+  width: 70%;
+  font-size: 15px;
+}
+.info-detail h6 {
+  font-size: 1em;
+  font-weight: 500;
+}
+.bottom-navigation {
+  margin: auto;
+  margin-left: 8vw;
+  width: 80%;
+}
+.bottom-navigation > * {
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+  color: #800080;
+}

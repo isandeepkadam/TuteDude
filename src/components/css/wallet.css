@@ -1,0 +1,83 @@
+.enrollment-info {
+  height: 84vh;
+  width: 90vw;
+  margin: 0 5vw;
+}
+.wallet-banner {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 8vw;
+  width: 80%;
+  padding: 1em 0;
+}
+.referral-info h5 {
+  color: #800080;
+}
+.referral-info h6 {
+  margin: 0.5em 0 0 0;
+  padding: 1em;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  letter-spacing: 1em;
+}
+.wallet {
+  margin: 0.5em 0 0 0;
+  padding: 1em;
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px rgba(128, 0, 128, 0.15);
+}
+.wallet h5 {
+  color: #800080;
+  padding: 2px;
+  font-weight: 500;
+}
+.wallet h6 {
+  padding: 2px;
+  font-size: 1em;
+}
+.referrals-title {
+  margin-top: 5em;
+  margin-left: 8vw;
+  width: 80%;
+  color: #800080;
+}
+.referrals-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 8vw;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  width: 80%;
+  color: #fff;
+}
+.friend-card {
+  background: linear-gradient(270deg, #800080 0%, #ff864c 100%);
+  flex: 1;
+  padding: 1em;
+  max-width: 350px;
+  max-height: 250px;
+  border-radius: 20px;
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+}
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+}
+.chip {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 0.5em;
+  font-size: 0.8em;
+}
+.referral-amount {
+  display: flex;
+  align-items: baseline;
+}
+.referral-amount span {
+  margin-left: 5px;
+  font-size: 1.2em;
+}

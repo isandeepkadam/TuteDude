@@ -1,0 +1,10 @@
+.breadCrumbs {
+  height: 8vh;
+  margin: 0 5vw;
+  display: flex;
+  align-items: center;
+}
+.crumbs {
+  margin-left: 8vw;
+  font-weight: 400;
+}
