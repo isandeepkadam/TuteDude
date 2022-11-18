@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="left" style={{ height: '100%' }}>
-        <img src="src\assets\tutedude.png" style={{ height: '100%' }}></img>
+        <img src="./tutedude.png" style={{ height: '100%' }}></img>
       </div>
       <ul className="right">
         <li className="navOptions">My Assignment</li>
