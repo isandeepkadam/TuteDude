@@ -1,10 +1,15 @@
-import './App.css';
 import { FriendsReferred, ReferandEarn } from './pages';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function App() {
+  console.log('Only ideal for mobile and desktop/laptop viewport');
   return (
     <div className="App">
-      <ReferandEarn />
-      <FriendsReferred />
+      <Router>
+        <Routes>
+          <Route path="/" element={<ReferandEarn />}></Route>
+          <Route path="/friendsreferred" element={<FriendsReferred />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

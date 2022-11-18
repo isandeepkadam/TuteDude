@@ -1,8 +1,11 @@
 .earnings {
   height: 84vh;
   display: flex;
-  margin: 0 5vw;
   flex-direction: column;
+  margin: 0 5vw;
+}
+.nav-back {
+  display: none;
 }
 .banner {
   margin-left: 8vw;
@@ -26,13 +29,19 @@
   width: 100%;
   display: flex;
 }
+.earning-info > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .earning-info:nth-child(2) > h3 {
   margin-left: -3em;
 }
 .earning-info h6 {
   font-size: 0.8em;
   font-weight: 500;
-  color: #800080;
+  color: var(--primary);
 }
 .earning-info h3 {
   font-size: 1.5rem;
@@ -43,11 +52,8 @@
   flex-direction: column;
   align-items: center;
 }
-
-.withdraw {
-}
 .withdraw-button {
-  background-color: #800080;
+  background-color: var(--primary);
   color: #fff;
   padding: 8px 16px;
   height: 2em;
@@ -57,23 +63,25 @@
   border-radius: 20px;
 }
 .withdraw-button:hover {
-  background-color: #800190;
+  background-color: var(--primary);
   cursor: pointer;
 }
 .referral-code {
   width: 40%;
 }
 .referral-code h3 {
-  color: #800080;
+  color: var(--primary);
 }
 .code {
   background: linear-gradient(white, white) padding-box,
-    linear-gradient(to right, #ff864c, #800080) border-box;
+    linear-gradient(to right, var(--secondary), var(--primary)) border-box;
   border-radius: 1em;
   border: 2px solid transparent;
-  margin-top: 0.5em;
-  padding: 1em 6em;
+  padding: 1em 5em;
   letter-spacing: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .referrals-info {
   margin-left: 8vw;
@@ -81,7 +89,7 @@
   margin-top: 1em;
 }
 .referralsInfo-title {
-  color: #800080;
+  color: var(--primary);
 }
 .referral-info-items {
   display: grid;
@@ -110,15 +118,96 @@
 }
 .info-detail h6 {
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
 }
 .bottom-navigation {
   margin: auto;
   margin-left: 8vw;
   width: 80%;
 }
-.bottom-navigation > * {
+
+.bottom-navigation h6 {
   margin-bottom: 0.5em;
-  font-size: 0.8em;
-  color: #800080;
+  font-size: 1em;
+  color: var(--primary);
 }
+
+/* Responsive Start */
+@media screen and (max-width: 700px) {
+  .earnings {
+    height: max-content;
+    margin-bottom: 50px;
+  }
+  .nav-back {
+    display: flex;
+    color: var(--primary);
+    margin-left: 8vw;
+    width: 80%;
+  }
+  .nav-back span {
+    font-weight: 600;
+    font-size: 1em;
+  }
+  .earning-info:nth-child(2) > h3 {
+    margin-left: 0;
+  }
+  .earning-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .earning-info > * {
+    display: flex;
+    align-items: flex-start;
+  }
+  .banner {
+    flex-direction: column;
+  }
+  .earnings-card {
+    position: relative;
+  }
+  .withdraw {
+    position: absolute;
+    bottom: 2em;
+    right: 1em;
+  }
+  .withdraw-button {
+    font-size: 0.8em;
+    align-self: baseline;
+  }
+  .earnings-card {
+    width: 100%;
+    height: 25vh;
+    padding: 1em;
+  }
+  .earning-info .item h6 {
+    font-size: 0.5em;
+  }
+  .referral-code {
+    width: 100%;
+    margin: 1em 0;
+  }
+  .referral-code h3 {
+    font-size: 1em;
+  }
+  .code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1em;
+  }
+  .referrals-info {
+    margin: 2em;
+  }
+  .referral-info-items {
+    grid-template-columns: 1fr;
+    margin-top: 2em;
+  }
+  .info-detail h6,
+  p {
+    font-size: 0.8em;
+  }
+  .bottom-navigation h6 {
+    font-size: 0.7em;
+  }
+}
+/* Responsive */

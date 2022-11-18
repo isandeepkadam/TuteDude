@@ -3,6 +3,8 @@
   width: 90vw;
   margin: 0 5vw;
 }
+
+/* Top section start */
 .wallet-banner {
   display: flex;
   justify-content: space-between;
@@ -11,23 +13,24 @@
   padding: 1em 0;
 }
 .referral-info h5 {
-  color: #800080;
+  color: var(--primary);
 }
 .referral-info h6 {
-  margin: 0.5em 0 0 0;
+  margin-top: 1em;
   padding: 1em;
+  font-weight: 400;
   border: 1px solid darkgray;
   border-radius: 5px;
   letter-spacing: 1em;
 }
 .wallet {
-  margin: 0.5em 0 0 0;
+  margin-top: 0.5em;
   padding: 1em;
   border-radius: 20px;
   box-shadow: 0px 2px 8px rgba(128, 0, 128, 0.15);
 }
 .wallet h5 {
-  color: #800080;
+  color: var(--primary);
   padding: 2px;
   font-weight: 500;
 }
@@ -35,13 +38,21 @@
   padding: 2px;
   font-size: 1em;
 }
+/* Top section  end */
+
+/* Bottom card section */
 .referrals-title {
   margin-top: 5em;
   margin-left: 8vw;
   width: 80%;
-  color: #800080;
+  color: var(--primary);
+}
+.enrolled-count {
+  font-weight: 400;
+  color: gray;
 }
 .referrals-cards {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-left: 8vw;
@@ -49,11 +60,19 @@
   margin-bottom: 3em;
   width: 80%;
   color: #fff;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border-radius: 20px;
 }
-.friend-card {
-  background: linear-gradient(270deg, #800080 0%, #ff864c 100%);
-  flex: 1;
+
+.referrals-cards::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  background: linear-gradient(270deg, var(--primary) 0%, var(--secondary) 100%);
   padding: 1em;
+  min-width: 350px;
+  max-height: 250px;
   max-width: 350px;
   max-height: 250px;
   border-radius: 20px;
@@ -61,6 +80,10 @@
 .card-title {
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
+}
+.courses-enrolled-info {
+  font-weight: 400;
 }
 .courses {
   display: flex;
@@ -77,7 +100,80 @@
   display: flex;
   align-items: baseline;
 }
+.referral-amount p {
+  font-size: 0.8em;
+}
 .referral-amount span {
   margin-left: 5px;
   font-size: 1.2em;
+}
+.shadow {
+  position: absolute;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(270deg, #6d6d6d 0%, rgba(61, 49, 49, 0) 42.79%);
+  border-radius: 0 20px 20px 0;
+}
+/* Bottom card section */
+
+/* Responsive 1000px */
+@media screen and (max-width: 1500px) {
+  .card {
+    margin: 0 1em 0 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card {
+    min-width: 250px;
+    max-width: 250px;
+    max-height: 150px;
+    max-height: 150px;
+  }
+  .card-title {
+    font-size: 0.8em;
+  }
+  .chip {
+    font-size: 0.5em;
+  }
+}
+
+/* Responsive 1000px */
+@media screen and (max-width: 700px) {
+  .enrollment-info {
+    margin-bottom: 50px;
+  }
+  .referrals-title {
+    margin-top: 1em;
+  }
+  .referrals-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    margin: 0 0 1em 0;
+  }
+  .shadow {
+    display: none;
+  }
+  .enrollment-info {
+    height: max-content;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wallet {
+    padding: 0.5em;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(128, 0, 128, 0.15);
+  }
+  .wallet h5 {
+    color: var(--primary);
+    padding: 2px;
+    font-weight: 500;
+  }
+  .wallet h6 {
+    padding: 2px;
+    font-size: 1em;
+  }
 }

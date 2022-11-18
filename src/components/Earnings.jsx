@@ -4,24 +4,26 @@ import {
   CurrencyRupee,
   LocalOffer,
   AccountBalanceWallet,
+  Percent,
 } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const Earnings = () => {
   return (
     <div className="earnings">
       {/* Referral Banner */}
-      <div className="banner">
+      <section className="banner">
         <div className="earnings-card">
           <div className="earning-info">
-            <div className="earning-info item">
+            <div className="earning-info item1">
               <h6>Referral Earning</h6>
               <h3>&#8377; 2,500</h3>
             </div>
-            <div className="earning-info item">
+            <div className="earning-info item2">
               <h6>Total Referrals</h6>
               <h3>7</h3>
             </div>
-            <div className="earning-info item">
+            <div className="earning-info item3">
               <h6>Wallet Balance</h6>
               <h3>&#8377; 500</h3>
             </div>
@@ -34,19 +36,20 @@ const Earnings = () => {
           <h3>Your Referral Code</h3>
           <div className="code">EDCH54</div>
         </div>
-      </div>
+      </section>
       {/* Referral info */}
-      <div className="referrals-info">
+      <summary className="referrals-info">
         <h3 className="referralsInfo-title">How does it work?</h3>
         <div className="referral-info-items">
           <div className="info-item">
             <div className="info-icon">
               <svg width={0} height={0}>
                 <linearGradient id="linearColors" x1={0} y1={1} x2={1} y2={1}>
+                  {/* SVG  for linear gradient icons */}
                   <stop offset={0} stopColor="#ff864c" />
                   <stop offset={1} stopColor="#800080" />
                 </linearGradient>
-              </svg>
+              </svg>{' '}
               <Groups sx={{ fill: 'url(#linearColors)' }} />
             </div>
             <div className="info-detail">
@@ -74,7 +77,7 @@ const Earnings = () => {
           </div>
           <div className="info-item">
             <div className="info-icon">
-              <Groups sx={{ fill: 'url(#linearColors)' }} />
+              <Percent sx={{ fill: 'url(#linearColors)' }} />
             </div>
             <div className="info-detail">
               <h6>Your Friend gets ₹ 200 Off </h6>
@@ -97,12 +100,14 @@ const Earnings = () => {
             </div>
           </div>
         </div>
-      </div>
+      </summary>
       {/* Bottom */}
-      <div className="bottom-navigation">
-        <h6>Friends Who Enrolled</h6>
+      <footer className="bottom-navigation">
+        <Link to="/friendsreferred">
+          <h6>Friends Who Enrolled</h6>
+        </Link>
         <h6>Terms & Conditions</h6>
-      </div>
+      </footer>
     </div>
   );
 };

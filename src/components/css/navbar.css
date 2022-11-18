@@ -9,16 +9,37 @@
   display: flex;
   align-items: center;
 }
+.right li {
+  list-style-type: none;
+}
 .navOptions {
   font-weight: 500;
   padding: 100px;
-  color: #800080;
+  color: var(--primary);
   opacity: 0.4;
   padding: 0 10px;
 }
 .navOptions.profile {
   display: flex;
   align-items: center;
-  color: #800080;
+  color: var(--primary);
   opacity: 1;
 }
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  .navOptions {
+    display: none;
+  }
+  .navOptions.profile {
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.8em;
+    border-radius: 5px;
+    padding: 0.5em;
+  }
+  .navOptions.profile .profile-icon {
+    display: none;
+  }
+}
+/* Responsive */
